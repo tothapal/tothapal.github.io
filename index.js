@@ -18,7 +18,6 @@ $('button').on('click',(event) =>{
 database.ref("postok").once('value').then(data=>{
     data.forEach(element => {
         $('#oldposts').append(`
-            <p></>
             <h3>${element.child('title').val()}</h3>
             <h4>${element.child('datum').val()}</h4>
             <div>${element.child('text').val()}</div>
