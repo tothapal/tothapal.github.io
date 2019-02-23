@@ -1,5 +1,7 @@
 $('posttext').html('');
 
+database = firebase.database();
+
 $('button').on('click',(event) =>{
     event.preventDefault();
     var d = new Date();
@@ -8,9 +10,6 @@ $('button').on('click',(event) =>{
     $('#title').val("");
     let szoveg = $('#posttext').val();  
     $('#posttext').val(""); 
-
-    database = firebase.database();
-
     let pathtoPosts = "postok";
     let data = {title: cim, text: szoveg, datum: ujdate};
 
@@ -18,7 +17,6 @@ $('button').on('click',(event) =>{
 });
 
 database.ref("postok").once('value').then(data=>{
-
     data.forEach(element => {
         $('#oldposts').append(`
             <h3>${element.child('title').val()}</h3>
@@ -26,4 +24,4 @@ database.ref("postok").once('value').then(data=>{
             <div>${element.child('text').val()}</div>
         `);
     });
-})
+});
