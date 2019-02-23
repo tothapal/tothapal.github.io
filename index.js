@@ -20,7 +20,7 @@ database.ref("postok").once('value').then(data=>{
         $('#oldposts').append(`
             <h3>${element.child('title').val()}</h3>
             <h4>${element.child('datum').val()}</h4>
-            <div>${element.child('text').val()}</div>
+            <div class="szoveg">${element.child('text').val()}</div>
         `);
     });
 });
