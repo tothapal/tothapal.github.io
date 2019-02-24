@@ -4,8 +4,6 @@ database = firebase.database();
 
 $('button').on('click',(event) =>{
     event.preventDefault();
-    var d = new Date();
-    var ujdate = d.toLocaleDateString("hu-HU",{year: "numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"})
     let cim = $('#title').val();
     $('#title').val("");
     let szoveg = $('#posttext').val();  
