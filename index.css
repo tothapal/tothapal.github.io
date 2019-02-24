@@ -12,10 +12,12 @@ body {
 
 button{
     background-color: white;
-    color:#763626;
-    border:none;
+    color:#336B87;
+    border-color:#336B87;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    border-radius: 10px; 
+
 }
 
 
