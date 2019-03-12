@@ -1,7 +1,7 @@
 $('posttext').html('');
 
 database = firebase.database();
-
+/*
 $('button').on('click',(event) =>{
     event.preventDefault();
     let cim = $('#title').val();
@@ -12,6 +12,7 @@ $('button').on('click',(event) =>{
     let data = {title: cim, text: szoveg, datum: ujdate};
     database.ref(pathtoPosts).push(data);
 });
+*/
 
 database.ref("postok").once('value').then(data=>{
     data.forEach(element => {
